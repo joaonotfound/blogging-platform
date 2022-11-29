@@ -1,23 +1,37 @@
 
 
-# MY GHOST SETUP
+# <strong>MY GHOST SETUP</strong>
 
-All your ghost data will be storaged on the data and content folder that will be generated. You must save this folders if your don't want to lose your data. 
+All your ghost data will be storaged on the data and content folder that will be generated. You must save this folders if your don't want to lose your data.
 
-# HOW TO RUN: 
+<br>
 
-Clone the project: 
+### HOW TO RUN:
+<br>
+
+<strong>Clone the project:</strong> 
+
 `git clone https://gitlab.com/joaonotfound/setup-ghost && cd setup-ghost`
 
-Run docker compose: 
+<br>
+
+<strong>Run docker compose:</strong>
+
+<i>Your must define a password for your MySQL Database it can be whatever you want to.</i>
+
 `sudo PASSWORD="your_database_password" docker compose up -d`
-Your must define a password for your MySQL Database it can be whatever you want to.
 
-Clone nginx:
+<br>
+
+<strong>Clone nginx:</strong>
+
 `sudo cp ./nginx/ghost /etc/nginx/sites-available/ `
-AND
-`ln -s /etc/nginx/sites-available/ghost /etc/nginx/sites-enabled/ghost`
 
-Restart nginx
-`/etc/init.d/nginx restart` or `systemctl restart nginx`
+`sudo ln -s /etc/nginx/sites-available/ghost /etc/nginx/sites-enabled/ghost`
+
+
+
+**Restart nginx:**
+
+`sudo /etc/init.d/nginx restart` *ou* `systemctl restart nginx`
 
