@@ -39,21 +39,25 @@ If you're running on a Fedora OS, you need to install the `docker-compose` packa
 ```
 ### Execute InstallNginx shellscript
 - `./install-nginx.sh`
-<br>
-<i>It's going to ask you for the root password. This script makes your nginx file available to your nginx service so nginx can properly recognize it. </i>
+
+    <i>It's going to ask you for the root password. This script makes your nginx file available to your nginx service so nginx can properly recognize it. </i>
 </br>
+
 ### Restart the ngixn service
 - `sudo /etc/init.d/nginx restart` *or* `systemctl restart nginx`
 
 ### Install cerbot on your VPS
 - `sudo apt install python3-acme python3-certbot python3-mock python3-openssl  python3-pkg-resources python3-pyparsing python3-zope.interface`
 - `sudo apt install python3-certbot-nginx`
-<br><i>Those commands is for debian based system only, unfortunately you must search for how to install certbot in your distro if you're using another one. </i></br>
+
+    <i>Those commands is for debian based system only, unfortunately you must search for how to install certbot in your distro if you're using another one. </i></br>
 ### Activate your SSL certificate
 - `sudo certbot --nginx -d yourdomain.com`
+
+    <i>Activating SSL certificate is required so you can access your blog through HTTPS protocol.</i>
 <br>
-<i>Activating SSL certificate is required so you can access your blog through HTTPS protocol.</i>
-<br>
+
+Now you must have a blog running in your VPS.
 
 
 
